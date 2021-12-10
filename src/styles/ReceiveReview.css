@@ -1,11 +1,12 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Georama:wght@300&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Georama", sans-serif;
+  font-family: "Carrois Gothic SC", sans-serif;
   /* font-family: "Chelsea Market", cursive; */
   /* font-family: 'Overlock SC', cursive; */
 }
@@ -60,7 +61,7 @@ body {
 
 .receivieReview_container .receive_items .slick-dots {
   top: 120px;
-  margin-top: 150px;
+  margin-top: 135px;
 }
 
 .receivieReview_container .receive_items .slick-dots button {
@@ -148,6 +149,7 @@ body {
   display: flex;
   font-size: 12px;
   margin-left: 5px;
+  font-family: "Readex Pro", sans-serif;
 }
 
 .receivieReview_container .receive_items .carousel_item .review_desc_time {
@@ -184,15 +186,16 @@ body {
 
 .receivieReview_container .receive_items .carousel_item .review_desc_time h4 {
   padding: 15px 25px;
+  font-family: "Readex Pro", sans-serif;
 }
 
 .receivieReview_container .receive_items .carousel_item .review_desc_time span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px 15px;
-  font-size: 10px;
+  width: 100%;
+  text-align: right;
+  padding: 5px 25px;
+  font-size: 11px;
   font-family: Arial, Helvetica, sans-serif;
   color: #090979;
+  font-family: "Readex Pro", sans-serif;
 }
 /*# sourceMappingURL=ReceiveReview.css.map */

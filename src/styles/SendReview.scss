@@ -199,6 +199,13 @@
   margin-bottom: 40px;
   .send_btn {
     width: 100%;
+    background: $color_2;
+    &:hover {
+      background-color: lighten($color_2, 10%);
+    }
+    &:active {
+      background-color: lighten($color_2, 20%);
+    }
   }
   .send_btn.alert {
     pointer-events: none;

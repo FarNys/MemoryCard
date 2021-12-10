@@ -33,7 +33,7 @@
     }
     .slick-dots {
       top: 120px;
-      margin-top: 150px;
+      margin-top: 135px;
       button {
         background-color: $color_3;
         overflow: hidden;
@@ -86,6 +86,7 @@
             display: flex;
             font-size: 12px;
             margin-left: 5px;
+            font-family: $font_1;
           }
         }
       }
@@ -98,6 +99,7 @@
         background-color: $color_3;
         border-radius: 0 0 12px 12px;
         padding-top: 5px;
+
         &::before {
           content: "";
           position: absolute;
@@ -110,13 +112,16 @@
         }
         h4 {
           padding: 15px 25px;
+          font-family: $font_1;
         }
         span {
-          display: flex;
-          padding: 10px 15px;
-          font-size: 10px;
+          width: 100%;
+          text-align: right;
+          padding: 5px 25px;
+          font-size: 11px;
           font-family: Arial, Helvetica, sans-serif;
           color: $color_2;
+          font-family: $font_1;
         }
       }
     }

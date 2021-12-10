@@ -38,7 +38,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mid_container_part_one">
-        <h1>Specification</h1>
+        <h1>Features</h1>
         <div className="spec_container">
           <div className="spec_items">
             {" "}
