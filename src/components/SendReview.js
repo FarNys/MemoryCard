@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import "../styles/SendReview.css";
 import PriorityHighIcon from "@material-ui/icons/PriorityHigh";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
+import { addReview, selectReviews } from "../features/reviewsSlice";
+import { useDispatch, useSelector } from "react-redux";
 const SendReview = () => {
-  const [dataBack, setdataBack] = useState({});
+  const dispatch = useDispatch();
   const [loading, setloading] = useState(false);
+  const reviewsSelect = useSelector(selectReviews);
+  console.log(reviewsSelect);
   const [failAlert, setfailAlert] = useState({
     failState: false,
     failMsg: "Review with this email already exists",
@@ -49,7 +53,8 @@ const SendReview = () => {
           }),
         });
         const data = await res.json();
-        setdataBack(data);
+        console.log(data.review);
+        dispatch(addReview({ newReview: data.review }));
         if (data.review) {
           setsuccessAlert({ ...successAlert, successState: true });
           reviews.name = "";

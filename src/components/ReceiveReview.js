@@ -78,22 +78,18 @@ const ReceiveReview = () => {
               >
                 <div className="review_icon_info">
                   <div className="review_icon_container">
-                    {el.order ? (
-                      el.order === "male" ? (
-                        <img
-                          src="./images/man.png"
-                          alt="manReview"
-                          className="reviews_icons"
-                        />
-                      ) : (
-                        <img
-                          src="./images/woman.png"
-                          alt="womanReview"
-                          className="reviews_icons"
-                        />
-                      )
+                    {el && el.order === "male" ? (
+                      <img
+                        src="./images/man.png"
+                        alt="manReview"
+                        className="reviews_icons"
+                      />
                     ) : (
-                      <p>No Gender</p>
+                      <img
+                        src="./images/woman.png"
+                        alt="womanReview"
+                        className="reviews_icons"
+                      />
                     )}
                   </div>
                   <div className="review_info_container">

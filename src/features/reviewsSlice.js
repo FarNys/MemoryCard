@@ -10,8 +10,11 @@ const reviewsSlice = createSlice({
     getAllReviews: (state, action) => {
       state.allReviews = action.payload.reviewsData;
     },
+    addReview: (state, action) => {
+      state.allReviews.push(action.payload.newReview);
+    },
   },
 });
-export const { getAllReviews } = reviewsSlice.actions;
+export const { getAllReviews, addReview } = reviewsSlice.actions;
 export const selectReviews = (state) => state.review.allReviews;
 export default reviewsSlice.reducer;
