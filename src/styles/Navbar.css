@@ -1,0 +1,114 @@
+.navbar_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  color: white;
+  background: linear-gradient(65deg, #c33764, #1d2671);
+}
+
+.nav_left {
+  width: 70px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+
+.nav_left a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_center li {
+  margin: 3px;
+  list-style: none;
+}
+
+.nav_center li a {
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  color: white;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.nav_center li:hover a {
+  background: white;
+  color: #c33764;
+}
+
+.nav_right {
+  padding-right: 10px;
+}
+
+.nav_right li {
+  list-style: none;
+}
+
+.nav_right li a {
+  text-decoration: none;
+  color: white;
+}
+
+.user_logout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_logout button {
+  background-color: white;
+  border: 1px solid white;
+  color: #c33764;
+  outline: none;
+  padding: 6px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.user_logout button:hover {
+  color: white;
+  background-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .navbar_container {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

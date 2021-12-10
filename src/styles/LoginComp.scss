@@ -1,0 +1,46 @@
+.loginComp_container {
+  background-color: bisque;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  .loginComp_container_left {
+    padding: 5px;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    .icon_finger {
+      color: hotpink;
+      margin: 5px;
+      font-size: 26px;
+    }
+  }
+  .register_conteiner {
+    border-radius: 12px;
+    background-color: indianred;
+
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    padding: 8px 12px;
+    &:hover {
+      background-color: orangered;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .loginComp_container {
+    flex-direction: column;
+    .register_conteiner {
+      margin-top: 20px;
+    }
+  }
+  .loginComp_container_left {
+    .icon_finger {
+      transform: rotate(90deg);
+    }
+  }
+}

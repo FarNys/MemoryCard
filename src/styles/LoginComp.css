@@ -1,0 +1,65 @@
+.loginComp_container {
+  background-color: bisque;
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+.loginComp_container .loginComp_container_left {
+  padding: 5px;
+  border: 2px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.loginComp_container .loginComp_container_left .icon_finger {
+  color: hotpink;
+  margin: 5px;
+  font-size: 26px;
+}
+
+.loginComp_container .register_conteiner {
+  border-radius: 12px;
+  background-color: indianred;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  padding: 8px 12px;
+}
+
+.loginComp_container .register_conteiner:hover {
+  background-color: orangered;
+}
+
+@media (max-width: 600px) {
+  .loginComp_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .loginComp_container .register_conteiner {
+    margin-top: 20px;
+  }
+  .loginComp_container_left .icon_finger {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+/*# sourceMappingURL=LoginComp.css.map */

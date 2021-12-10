@@ -1,0 +1,120 @@
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllReviews, selectReviews } from "../features/reviewsSlice";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../styles/ReceiveReview.css";
+import ManIcon from "@mui/icons-material/Man";
+import WomanIcon from "@mui/icons-material/Woman";
+import Slider from "react-slick";
+
+const ReceiveReview = () => {
+  const dispatch = useDispatch();
+  const [loading, setloading] = useState(false);
+  const receiveReviews = useSelector(selectReviews);
+
+  useEffect(() => {
+    const getReviews = async () => {
+      try {
+        const result = await fetch("http://localhost:5000/reviews");
+        const data = await result.json();
+        console.log(data);
+        dispatch(
+          getAllReviews({
+            reviewsData: data,
+          })
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    console.log(receiveReviews);
+    getReviews();
+  }, [dispatch]);
+
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div className="receivieReview_container">
+      <h1>Most Recent Reviews</h1>
+      <div className="receive_items">
+        <Slider {...settings}>
+          {receiveReviews.length > 0 &&
+            receiveReviews.slice(0, receiveReviews.length).map((el) => (
+              <div
+                className="carousel_item"
+                key={el._id}
+                style={{ width: 400 }}
+              >
+                <div className="review_icon_info">
+                  <div className="review_icon_container">
+                    {el.order ? (
+                      el.order === "male" ? (
+                        <img
+                          src="./images/man.png"
+                          alt="manReview"
+                          className="reviews_icons"
+                        />
+                      ) : (
+                        <img
+                          src="./images/woman.png"
+                          alt="womanReview"
+                          className="reviews_icons"
+                        />
+                      )
+                    ) : (
+                      <p>No Gender</p>
+                    )}
+                  </div>
+                  <div className="review_info_container">
+                    <h4>
+                      {el.name} ({el.job})
+                    </h4>
+                    <span>{el.mail}</span>
+                  </div>
+                </div>
+                <div className="review_desc_time">
+                  <h4>{el.desc}</h4>
+                  <span>{new Date(el.timeStamp).toLocaleDateString()}</span>
+                </div>
+              </div>
+            ))}
+        </Slider>
+      </div>
+    </div>
+  );
+};
+
+export default ReceiveReview;
