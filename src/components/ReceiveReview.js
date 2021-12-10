@@ -4,13 +4,11 @@ import { getAllReviews, selectReviews } from "../features/reviewsSlice";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/ReceiveReview.css";
-import ManIcon from "@mui/icons-material/Man";
-import WomanIcon from "@mui/icons-material/Woman";
+
 import Slider from "react-slick";
 
 const ReceiveReview = () => {
   const dispatch = useDispatch();
-  const [loading, setloading] = useState(false);
   const receiveReviews = useSelector(selectReviews);
 
   useEffect(() => {

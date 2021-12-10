@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  setCard,
-  selectCard,
-  selectCurrentCard,
-  selectWishCard,
-  deleteItem,
-  setWishCard,
-  changeWishState,
-} from "../features/cardSlice";
+import { setCard, selectCard } from "../features/cardSlice";
 import { useSelector, useDispatch } from "react-redux";
 import SingleCard from "../components/SingleCard";
 import "../styles/SingleCard.css";

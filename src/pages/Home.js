@@ -37,62 +37,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      {/* OLD METHOD */}
-      {/* <div className="mid_section"> */}
-      {/* <div className="text_container">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus
-            odit molestias, ex saepe aspernatur velit enim maiores dolorem
-            numquam? <br />
-            Simply make your own memory cards by going to{" "}
-            <span>
-              <Link to="/create">Create</Link>
-            </span>{" "}
-            and fill the fields and then click on Create Card
-          </p>
-        </div>
-        <div className="home_image">
-          <img src="/images/paper.png" alt="memory card" />
-        </div>
-      </div>
-      <div className="featuring_container">
-        <div className="card_box card_one">
-          <h3>Fast</h3>
-          <div className="card_one_box">
-            <SpeedIcon className="icon_class" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, at.
-              <br />
-              With just few click you can make your own card
-            </p>
-          </div>
-        </div>
-        <div className="card_box card_two">
-          <h3>Featured</h3>
-          <div className="card_two_box">
-            <FeaturedPlayListIcon className="icon_class" />
-            <p>
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, at.
-              <br />
-              You can fill up to 5fields to make a better cards
-            </p>
-          </div>
-        </div>
-        <div className="card_box card_three">
-          <h3>Verified</h3>
-          <div className="card_three_box">
-            <VerifiedUserIcon className="icon_class" />
-            <p>
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, at.
-              <br />
-              Everything is completely free and verified
-            </p>
-          </div>
-        </div> */}
-      {/* </div> */}
-      {/* OLD METHOD ENDED */}
       <div className="mid_container_part_one">
         <h1>Specification</h1>
         <div className="spec_container">
@@ -233,8 +177,8 @@ const Home = () => {
         <DiHeroku />
       </div> */}
       {/* <Review /> */}
-      <ReceiveReview />
       <LoginComp />
+      <ReceiveReview />
       <SendReview />
       <Footer />
     </div>

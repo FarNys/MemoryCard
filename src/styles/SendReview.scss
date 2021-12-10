@@ -1,3 +1,4 @@
+@import "../index.scss";
 .send_review_container {
   position: relative;
   display: flex;
@@ -6,10 +7,10 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 350px;
-  background-color: blanchedalmond;
+  background-color: $color_3;
 
   h1 {
-    margin: 50px auto 30px auto;
+    margin: 50px auto;
   }
   .alert_review_container {
     position: absolute;
@@ -24,7 +25,7 @@
     animation-name: alert_animate;
     animation-iteration-count: 1;
     animation-duration: 0.3s;
-    color: white;
+    color: $color_4;
     border-radius: 12px;
     p {
       display: flex;
@@ -62,7 +63,7 @@
   max-width: 900px;
   min-width: 320px;
   padding: 25px 25px 0 25px;
-  background-color: white;
+  background-color: $color_4;
   box-shadow: 0 3px 12px 3px rgba(0, 0, 0, 0.3);
   margin: 0 0 40px 0;
   border-radius: 16px;
@@ -90,13 +91,13 @@
       }
       &:focus-within {
         input {
-          border: 2px solid #1d2671;
+          border: 2px solid $color_1;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
         }
         label {
           top: -20px;
           left: 5px;
-          color: #1d2671;
+          color: $color_1;
           font-size: 12px;
           font-weight: bold;
         }
@@ -106,7 +107,7 @@
         padding: 0px 3px;
         top: -35px;
         left: 0px;
-        background: white;
+        background: $color_4;
         font-size: 12px;
         color: #555;
         transition: 0.3s ease;
@@ -130,7 +131,7 @@
         label {
           top: -20px;
           left: 10px;
-          color: #1d2671;
+          color: $color_1;
           font-size: 12px;
           font-weight: bold;
         }
@@ -140,7 +141,7 @@
         padding: 3px;
         top: -35px;
         left: 0;
-        background: white;
+        background: $color_4;
         font-size: 12px;
         color: #555;
         transition: 0.3s ease all;
@@ -161,7 +162,7 @@
         margin: auto;
         &:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-          border: 2px solid #1d2671;
+          border: 2px solid $color_1;
         }
       }
       .text_remaining {
@@ -176,8 +177,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #1d2671;
-    border-bottom: 1px solid #1d2671;
+    border-top: 1px solid $color_1;
+    border-bottom: 1px solid $color_1;
     padding: 15px;
     align-self: center;
     select {

@@ -1,3 +1,20 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@300&family=Gurajada&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Georama", sans-serif;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
 .send_review_container {
   position: relative;
   display: -webkit-box;
@@ -15,11 +32,11 @@
       -ms-flex-align: center;
           align-items: center;
   min-width: 350px;
-  background-color: blanchedalmond;
+  background-color: #00d4ff;
 }
 
 .send_review_container h1 {
-  margin: 50px auto 30px auto;
+  margin: 50px auto;
 }
 
 .send_review_container .alert_review_container {
@@ -45,7 +62,7 @@
           animation-iteration-count: 1;
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
-  color: white;
+  color: #fefefe;
   border-radius: 12px;
 }
 
@@ -117,7 +134,7 @@
   max-width: 900px;
   min-width: 320px;
   padding: 25px 25px 0 25px;
-  background-color: white;
+  background-color: #fefefe;
   -webkit-box-shadow: 0 3px 12px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 3px 12px 3px rgba(0, 0, 0, 0.3);
   margin: 0 0 40px 0;
@@ -163,7 +180,7 @@
 }
 
 .send_review_form .send_review_top .send_review_input:focus-within input {
-  border: 2px solid #1d2671;
+  border: 2px solid #020024;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
@@ -171,7 +188,7 @@
 .send_review_form .send_review_top .send_review_input:focus-within label {
   top: -20px;
   left: 5px;
-  color: #1d2671;
+  color: #020024;
   font-size: 12px;
   font-weight: bold;
 }
@@ -181,7 +198,7 @@
   padding: 0px 3px;
   top: -35px;
   left: 0px;
-  background: white;
+  background: #fefefe;
   font-size: 12px;
   color: #555;
   -webkit-transition: 0.3s ease;
@@ -222,7 +239,7 @@
 .send_review_form .send_review_bot .send_review_input:focus-within label {
   top: -20px;
   left: 10px;
-  color: #1d2671;
+  color: #020024;
   font-size: 12px;
   font-weight: bold;
 }
@@ -232,7 +249,7 @@
   padding: 3px;
   top: -35px;
   left: 0;
-  background: white;
+  background: #fefefe;
   font-size: 12px;
   color: #555;
   -webkit-transition: 0.3s ease all;
@@ -258,7 +275,7 @@
 .send_review_form .send_review_bot .send_review_input textarea:focus {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  border: 2px solid #1d2671;
+  border: 2px solid #020024;
 }
 
 .send_review_form .send_review_bot .send_review_input .text_remaining {
@@ -278,8 +295,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 1px solid #1d2671;
-  border-bottom: 1px solid #1d2671;
+  border-top: 1px solid #020024;
+  border-bottom: 1px solid #020024;
   padding: 15px;
   -ms-flex-item-align: center;
       align-self: center;

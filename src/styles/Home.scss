@@ -1,13 +1,5 @@
-// @import "../index.scss";
-// .testing {
-//   @include flexBOX(row, center, center, 1.2);
-//   width: 100%;
-//   color: green;
-//   &:hover {
-//     transform: scale(0.95);
-//     complement($first_color);
-//   }
-// }
+@import "../index.scss";
+
 .home_container {
   position: relative;
   top: 0;
@@ -41,8 +33,9 @@
       animation-fill-mode: forwards;
       transform: translateY(50px);
       opacity: 0;
-      background-color: white;
+      background-color: $color_4;
       padding: 12px;
+      color: $color_2;
     }
     @for $i from 1 through 50 {
       h1:nth-child(#{$i}n) {
@@ -55,13 +48,14 @@
     h2 {
       z-index: 10;
       padding: 5px 15px;
-      background-color: white;
+      background-color: $color_4;
       font-family: "Overlock SC", cursive;
       animation-name: title;
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
       transform: translateY(50px);
       opacity: 0;
+      color: $color_2;
       &:last-child {
         background-color: greenyellow;
         animation-delay: 1.5s;
@@ -86,118 +80,11 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(65deg, #c33764, #1d2671);
+    background: linear-gradient(90deg, $color_1, $color_2, $color_3);
     clip-path: circle(370vh at 50% -300vh);
   }
 }
-//
-//OLD STYLE
-// .mid_section {
-//   max-width: 1000px;
-//   margin: 70px auto;
 
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-wrap: wrap;
-// }
-// .text_container {
-//   flex: 1;
-//   min-width: 320px;
-//   p {
-//     font-size: 18px;
-//     font-weight: 600;
-//     padding: 10px;
-//     span {
-//       a {
-//         text-decoration: none;
-//         color: #c33764;
-//         padding: 2px;
-//         &:hover {
-//           background-color: #c33764;
-//           color: white;
-//         }
-//       }
-//     }
-//   }
-// }
-// .home_image {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex: 1;
-//   img {
-//     max-width: 250px;
-//     object-fit: contain;
-//   }
-// }
-// .featuring_container {
-//   margin: 70px auto;
-//   display: flex;
-//   justify-content: center;
-//   align-items: flex-start;
-//   flex-wrap: wrap;
-//   .card_box {
-//     width: 200px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     align-items: center;
-//     margin: 10px;
-
-//     border-radius: 12px;
-//     overflow: hidden;
-//     &:hover {
-//       box-shadow: 0 0 4px 1px #c33764;
-//     }
-//     p {
-//       padding: 5px;
-//       font-size: 16px;
-//       font-weight: 600;
-//     }
-//     h3 {
-//       font-family: "Overlock SC", cursive;
-//       font-size: 24px;
-//       padding: 5px;
-//       width: 100%;
-//       text-align: center;
-//     }
-//   }
-//   .card_one {
-//     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5);
-//     h3 {
-//       background-color: #c33764;
-//       color: white;
-//     }
-//   }
-//   .card_two {
-//     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5);
-//     &:hover {
-//       box-shadow: 0 0 4px 1px #8b2a87;
-//     }
-//     h3 {
-//       background: linear-gradient(90deg, #c33764, #1d2671);
-//       color: white;
-//     }
-//   }
-//   .card_three {
-//     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5);
-//     &:hover {
-//       box-shadow: 0 0 4px 1px #1d2671;
-//     }
-//     h3 {
-//       background-color: #1d2671;
-//       color: white;
-//     }
-//   }
-// }
-// .icon_class {
-//   margin: 10px auto !important;
-//   font-size: 32px !important;
-//   width: 100% !important;
-// }
-//OLD STYLE ENDED
-//NEW STYLE:
 .mid_container_part_one {
   width: 100%;
   margin-top: 0;
@@ -207,7 +94,7 @@
   align-items: center;
 
   h1 {
-    color: red;
+    color: $color_3;
     margin-top: 50px;
     margin-bottom: 20px;
   }
@@ -222,17 +109,22 @@
     .spec_items {
       width: 320px;
       margin: 10px;
-      box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 2px 10px 2px $color_3;
+      background-color: $color_4;
       .icon_home {
         margin-top: 10px;
         width: 100%;
         text-align: center;
+        color: $color_3;
       }
       h5 {
+        color: $color_3;
         text-align: center;
       }
       p {
         padding: 15px;
+        color: $color_4;
+        color: $color_1;
         // font-family: sans-serif;
       }
     }
@@ -246,7 +138,7 @@
       align-items: center;
       margin: 10px;
       flex-wrap: wrap;
-      background-color: white;
+      background-color: $color_4;
       box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
       text-decoration: none;
       transition: 0.2s ease all;
@@ -264,7 +156,7 @@
           color: rgb(97, 218, 251);
         }
         &:hover {
-          box-shadow: 0px 2px 8px rgb(97, 218, 251);
+          box-shadow: 0px 2px 12px 2px rgb(97, 218, 251);
         }
       }
       &:nth-child(2) {
@@ -275,7 +167,7 @@
           color: #764abc;
         }
         &:hover {
-          box-shadow: 0px 2px 8px #764abc;
+          box-shadow: 0px 2px 12px 2px #764abc;
         }
       }
       &:nth-child(3) {
@@ -286,7 +178,7 @@
           color: #68a063;
         }
         &:hover {
-          box-shadow: 0px 2px 8px #68a063;
+          box-shadow: 0px 2px 12px 2px #68a063;
         }
       }
       &:nth-child(4) {
@@ -297,7 +189,7 @@
           color: #4db33d;
         }
         &:hover {
-          box-shadow: 0px 2px 8px #4db33d;
+          box-shadow: 0px 2px 12px 2px #4db33d;
         }
       }
 
@@ -309,7 +201,7 @@
           color: #6567a5;
         }
         &:hover {
-          box-shadow: 0px 2px 8px #6567a5;
+          box-shadow: 0px 2px 12px 2px #6567a5;
         }
       }
       .icon_home {
@@ -319,10 +211,13 @@
   }
 }
 .mid_container_part_one:nth-of-type(2n) {
-  background-color: bisque;
+  background-color: $color_1;
 }
 .mid_container_part_one:nth-of-type(2n + 1) {
-  background-color: #dddddd;
+  background-color: $color_3;
+  h1 {
+    color: $color_1;
+  }
 }
 .mid_container_part_one:nth-of-type(2) {
   margin-top: 75px;
@@ -337,7 +232,7 @@
         color: #c69;
       }
       &:hover {
-        box-shadow: 0px 2px 8px #c69;
+        box-shadow: 0px 2px 12px 2px #c69;
       }
     }
     &:nth-child(2) {
@@ -348,7 +243,7 @@
         color: rgb(0, 127, 255);
       }
       &:hover {
-        box-shadow: 0px 2px 8px rgb(0, 127, 255);
+        box-shadow: 0px 2px 12px 2px rgb(0, 127, 255);
       }
     }
     &:nth-child(3) {
@@ -359,7 +254,7 @@
         color: rgb(233, 30, 90);
       }
       &:hover {
-        box-shadow: 0px 2px 8px rgb(233, 30, 90);
+        box-shadow: 0px 2px 12px 2px rgb(233, 30, 90);
       }
     }
     &:nth-child(4) {
@@ -370,7 +265,7 @@
         color: orangered;
       }
       &:hover {
-        box-shadow: 0px 2px 8px orangered;
+        box-shadow: 0px 2px 12px 2px orangered;
       }
     }
   }
