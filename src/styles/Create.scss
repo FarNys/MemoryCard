@@ -1,3 +1,4 @@
+@import "../index.scss";
 .create_card_container {
   position: relative;
   width: 100%;
@@ -12,7 +13,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(65deg, #c33764, #1d2671);
+    background: linear-gradient(65deg, $color_1, $color_2, $color_3);
     clip-path: circle(90vh at 100% -20vh);
     z-index: -1;
   }
@@ -23,7 +24,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(65deg, #c33764, #1d2671);
+    background: linear-gradient(65deg, $color_1, $color_2, $color_3);
     clip-path: circle(60vh at 20% 100vh);
     z-index: -1;
   }
@@ -35,13 +36,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
-    color: #c33764;
+    background-color: #c33764;
+    // color: #c33764;
     top: 0;
     h4 {
       padding: 8px 12px;
-      border: 2px solid #c33764;
       border-radius: 6px;
+      color: $color_4;
     }
   }
   .alert_container.succes {
@@ -53,13 +54,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
-    color: #09b333;
-    border: 2px solid #09b333;
+    background-color: #09b333;
     top: 0;
     h4 {
       padding: 8px 12px;
       border: none;
+      color: $color_4;
     }
   }
 }
@@ -76,15 +76,24 @@
   // border: 3px solid red;
   padding-bottom: 50px;
   box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.4);
-  background-color: white;
+  background-color: $color_4;
   h1 {
-    font-family: "Overlock SC", cursive;
+    font-family: $font_2;
     text-align: center;
     padding: 20px;
     font-size: 22px;
     width: 100%;
-    color: white;
-    background: linear-gradient(65deg, #c33764, #1d2671);
+    color: $color_4;
+    background: linear-gradient(65deg, $color_1, $color_2, $color_3);
+  }
+  button {
+    background: $color_2;
+    &:hover {
+      background: lighten($color_2, 10%);
+    }
+    &:active {
+      background: lighten($color_2, 20%);
+    }
   }
 }
 .single_container {
@@ -95,10 +104,10 @@
   width: 100%;
   padding: 5px;
   label {
-    display: flex;
     font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   input {
     font-size: 12px;
@@ -106,22 +115,31 @@
     letter-spacing: 1.1px;
     padding: 6px 8px;
     width: 100%;
-    border: 1px solid #1d2671;
+    border: 1px solid $color_1;
     outline: none;
+    font-family: $font_1;
+    font-weight: 400;
+
     &:focus {
-      border: 1px solid #c33764;
+      border: 1px solid $color_3;
     }
   }
   span {
     margin-left: 5px;
   }
 }
+.icon_error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
 .save_btn {
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  background: linear-gradient(65deg, #c33764, #1d2671);
-  color: white;
+  background: $color_2;
+  color: $color_4;
   border: none;
   outline: none;
   font-size: 16px;
@@ -129,11 +147,11 @@
   letter-spacing: 1px;
 
   &:hover {
-    background: linear-gradient(65deg, #c33763dd, #1d2671dd);
-    cursor: pointer;
+    background: lighten($color_2, 10%);
+    // cursor: pointer;
   }
   &:active {
-    transform: scale(0.995);
+    background: lighten($color_2, 20%);
   }
 }
 .span_error {

@@ -70,7 +70,7 @@ const CardModals = ({ onClose, isOpen, item, setisOpen }) => {
         {success && (
           <Fade top>
             <div className="alert_container_modal">
-              <h4>Card has been Edited</h4>
+              <h4>Card has been edited</h4>
             </div>
           </Fade>
         )}

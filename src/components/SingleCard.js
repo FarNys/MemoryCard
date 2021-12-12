@@ -69,12 +69,12 @@ const SingleCard = ({ item }) => {
           deleteEffect ? "singlecard_container active" : "singlecard_container"
         }
       >
-        <div className="singlecard_title">{item.title}</div>
+        {/* <div className="singlecard_title">{item.title}</div> */}
         <div className="singlecard_img">
           <img src={item.image} alt={item.title} />
         </div>
         <div className="singlecard_desc">
-          <p>{item.description}</p>
+          <p>{item.title}</p>
         </div>
         <div className="singlecard_bottom">
           <div className="wish_btn_container">

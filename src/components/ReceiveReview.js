@@ -70,41 +70,43 @@ const ReceiveReview = () => {
       <div className="receive_items">
         <Slider {...settings}>
           {receiveReviews.length > 0 &&
-            receiveReviews.slice(0, receiveReviews.length).map((el) => (
-              <div
-                className="carousel_item"
-                key={el._id}
-                style={{ width: 400 }}
-              >
-                <div className="review_icon_info">
-                  <div className="review_icon_container">
-                    {el && el.order === "male" ? (
-                      <img
-                        src="./images/man.png"
-                        alt="manReview"
-                        className="reviews_icons"
-                      />
-                    ) : (
-                      <img
-                        src="./images/woman.png"
-                        alt="womanReview"
-                        className="reviews_icons"
-                      />
-                    )}
+            receiveReviews
+              .slice(receiveReviews.length - 15, receiveReviews.length)
+              .map((el) => (
+                <div
+                  className="carousel_item"
+                  key={el._id}
+                  style={{ width: 400 }}
+                >
+                  <div className="review_icon_info">
+                    <div className="review_icon_container">
+                      {el && el.order === "male" ? (
+                        <img
+                          src="./images/man.png"
+                          alt="manReview"
+                          className="reviews_icons"
+                        />
+                      ) : (
+                        <img
+                          src="./images/woman.png"
+                          alt="womanReview"
+                          className="reviews_icons"
+                        />
+                      )}
+                    </div>
+                    <div className="review_info_container">
+                      <h4>
+                        {el.name} ({el.job})
+                      </h4>
+                      <span>{el.mail}</span>
+                    </div>
                   </div>
-                  <div className="review_info_container">
-                    <h4>
-                      {el.name} ({el.job})
-                    </h4>
-                    <span>{el.mail}</span>
+                  <div className="review_desc_time">
+                    <p>{el.desc}</p>
+                    <span>{new Date(el.timeStamp).toLocaleDateString()}</span>
                   </div>
                 </div>
-                <div className="review_desc_time">
-                  <h4>{el.desc}</h4>
-                  <span>{new Date(el.timeStamp).toLocaleDateString()}</span>
-                </div>
-              </div>
-            ))}
+              ))}
         </Slider>
       </div>
     </div>

@@ -144,7 +144,7 @@ const SendReview = () => {
           </div>
         </div>
         <div className="male_femail_container">
-          <h4>Choose : </h4>
+          <h4>Gender : </h4>
           <select name="order" onChange={reviewHandler}>
             {/* <option value="none">none</option> */}
             <option value="male">Male</option>

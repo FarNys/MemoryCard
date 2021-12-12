@@ -160,7 +160,7 @@ const Create = () => {
           <label htmlFor="title">
             Title{" "}
             <span>
-              <ErrorOutlineIcon style={{ color: "#1d2671" }} />
+              <ErrorOutlineIcon className="icon_error" />
             </span>
           </label>
           <input
@@ -175,7 +175,7 @@ const Create = () => {
           <label htmlFor="description">
             description{" "}
             <span>
-              <ErrorOutlineIcon style={{ color: "#1d2671" }} />
+              <ErrorOutlineIcon className="icon_error" />
             </span>
           </label>
           <input
@@ -188,7 +188,7 @@ const Create = () => {
         </div>{" "}
         <div className="single_container">
           <label htmlFor="image">
-            Image ( 150kB > ) <ErrorOutlineIcon style={{ color: "#1d2671" }} />
+            Image ( 150kB > ) <ErrorOutlineIcon className="icon_error" />
             {/* <input type="text" name="image" value={cardData.image} required /> */}
           </label>
           <span>
@@ -222,7 +222,7 @@ const Create = () => {
           <button onClick={removeFieldHandler}>Remove all fields</button>
         )}
         <button className="save_btn" onClick={saveHandler} type="submit">
-          Create Card
+          Create
         </button>
       </form>
     </div>

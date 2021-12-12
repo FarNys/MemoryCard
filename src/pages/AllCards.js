@@ -3,12 +3,14 @@ import { setCard, selectCard } from "../features/cardSlice";
 import { useSelector, useDispatch } from "react-redux";
 import SingleCard from "../components/SingleCard";
 import "../styles/SingleCard.css";
+
 import Loader from "react-js-loader";
+import States from "../components/States";
+import Blobs from "../components/Blobs";
 const AllCards = () => {
   const [loading, setloading] = useState(false);
   const dispatch = useDispatch();
   const myCards = useSelector(selectCard);
-
   //CHANGE WISH STATE
   // const wishHandler = async (item) => {
   //   const res = await fetch(`http://localhost:5000/allcards/${item._id}`, {
@@ -64,21 +66,13 @@ const AllCards = () => {
 
   return (
     <div className="allcard_container">
-      {/* <div className="option_container">
-        <p onClick={allCardsHandler}>All Cards</p>
-        <p onClick={wishListHandler}>Wishlist</p>
-      </div> */}
+      <States />
+      <Blobs blobClass={"blobs_one"} />
+      <Blobs blobClass={"blobs_two"} />
       <div className="allcard_container_inner">
         {myCards.length > 0 ? (
           myCards.map((item) => {
-            return (
-              <SingleCard
-                item={item}
-                key={item._id}
-                // deleteHandler={deleteHandler}
-                // wishHandler={wishHandler}
-              />
-            );
+            return <SingleCard item={item} key={item._id} />;
           })
         ) : (
           <h3>No Card yet!</h3>

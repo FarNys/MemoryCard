@@ -1,3 +1,21 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Georama:wght@600&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Carrois Gothic SC", sans-serif;
+  /* font-family: "Chelsea Market", cursive; */
+  /* font-family: 'Overlock SC', cursive; */
+}
+
+body {
+  position: relative;
+}
+
+/* #c33764 → #1d2671 */
 .create_card_container {
   position: relative;
   width: 100%;
@@ -18,7 +36,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(65deg, #c33764, #1d2671);
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
   -webkit-clip-path: circle(90vh at 100% -20vh);
           clip-path: circle(90vh at 100% -20vh);
   z-index: -1;
@@ -31,7 +49,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(65deg, #c33764, #1d2671);
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
   -webkit-clip-path: circle(60vh at 20% 100vh);
           clip-path: circle(60vh at 20% 100vh);
   z-index: -1;
@@ -52,15 +70,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: white;
-  color: #c33764;
+  background-color: #c33764;
   top: 0;
 }
 
 .create_card_container .alert_container h4 {
   padding: 8px 12px;
-  border: 2px solid #c33764;
   border-radius: 6px;
+  color: #fefefe;
 }
 
 .create_card_container .alert_container.succes {
@@ -82,15 +99,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: white;
-  color: #09b333;
-  border: 2px solid #09b333;
+  background-color: #09b333;
   top: 0;
 }
 
 .create_card_container .alert_container.succes h4 {
   padding: 8px 12px;
   border: none;
+  color: #fefefe;
 }
 
 .memory_card_container {
@@ -117,17 +133,29 @@
   padding-bottom: 50px;
   -webkit-box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.4);
           box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.4);
-  background-color: white;
+  background-color: #fefefe;
 }
 
 .memory_card_container h1 {
-  font-family: "Overlock SC", cursive;
+  font-family: "Carrois Gothic SC", sans-serif;
   text-align: center;
   padding: 20px;
   font-size: 22px;
   width: 100%;
-  color: white;
-  background: linear-gradient(65deg, #c33764, #1d2671);
+  color: #fefefe;
+  background: linear-gradient(65deg, #020024, #090979, #00d4ff);
+}
+
+.memory_card_container button {
+  background: #090979;
+}
+
+.memory_card_container button:hover {
+  background: #0d0da8;
+}
+
+.memory_card_container button:active {
+  background: #1010d8;
 }
 
 .single_container {
@@ -149,12 +177,16 @@
 }
 
 .single_container label {
+  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .single_container input {
@@ -163,24 +195,39 @@
   letter-spacing: 1.1px;
   padding: 6px 8px;
   width: 100%;
-  border: 1px solid #1d2671;
+  border: 1px solid #020024;
   outline: none;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 400;
 }
 
 .single_container input:focus {
-  border: 1px solid #c33764;
+  border: 1px solid #00d4ff;
 }
 
 .single_container span {
   margin-left: 5px;
 }
 
+.icon_error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+}
+
 .save_btn {
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  background: linear-gradient(65deg, #c33764, #1d2671);
-  color: white;
+  background: #090979;
+  color: #fefefe;
   border: none;
   outline: none;
   font-size: 16px;
@@ -189,13 +236,11 @@
 }
 
 .save_btn:hover {
-  background: linear-gradient(65deg, #c33763dd, #1d2671dd);
-  cursor: pointer;
+  background: #0d0da8;
 }
 
 .save_btn:active {
-  -webkit-transform: scale(0.995);
-          transform: scale(0.995);
+  background: #1010d8;
 }
 
 .span_error {
